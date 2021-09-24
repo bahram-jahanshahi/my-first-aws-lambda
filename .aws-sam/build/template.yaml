@@ -17,3 +17,6 @@ Resources:
       Runtime: java11
       MemorySize: 512
       Timeout: 6
+      Environment:
+        Variables:
+          restapiurl: testUrl

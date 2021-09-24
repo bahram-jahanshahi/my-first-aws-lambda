@@ -53,6 +53,9 @@ public class DataType {
 
     public void getOutput(InputStream input, OutputStream output, Context context) throws IOException {
 
+        System.out.println(System.getenv("restapiurl"));
+
+
         System.out.println(context.getAwsRequestId());
         System.out.println(context.getFunctionName());
         System.out.println(context.getRemainingTimeInMillis());

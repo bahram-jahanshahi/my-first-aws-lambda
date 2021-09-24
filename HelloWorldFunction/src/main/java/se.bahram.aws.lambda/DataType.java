@@ -1,5 +1,7 @@
 package se.bahram.aws.lambda;
 
+import com.amazonaws.services.lambda.runtime.Context;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -49,7 +51,14 @@ public class DataType {
         return clinicalData;
     }
 
-    public void getOutput(InputStream input, OutputStream output) throws IOException {
+    public void getOutput(InputStream input, OutputStream output, Context context) throws IOException {
+
+        System.out.println(context.getAwsRequestId());
+        System.out.println(context.getFunctionName());
+        System.out.println(context.getRemainingTimeInMillis());
+        System.out.println(context.getMemoryLimitInMB());
+        System.out.println(context.getLogGroupName());
+
         int data = 0;
         while ((data = input.read()) != -1) {
             output.write(Character.toLowerCase(data));

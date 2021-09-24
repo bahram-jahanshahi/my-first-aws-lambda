@@ -16,3 +16,4 @@ Resources:
       Handler: se.bahram.aws.lambda.DataType::getOutput
       Runtime: java11
       MemorySize: 512
+      Timeout: 6

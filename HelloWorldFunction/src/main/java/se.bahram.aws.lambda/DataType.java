@@ -13,6 +13,7 @@ public class DataType {
     private static Double staticVariable = Math.random();
 
     public void coldsStartBasics() {
+
         Double localVariable = Math.random();
 
         System.out.println("localVariable = " + localVariable);
@@ -38,6 +39,7 @@ public class DataType {
         studentScores.put("Bahram", 80);
         studentScores.put("Vidar", 90);
         studentScores.put("Marco", 95);
+        studentScores.put("Juan Pablo", 100);
         studentScores.put("Juan Pablo", 100);
 
         List<Integer> matchingScores = new LinkedList<>();

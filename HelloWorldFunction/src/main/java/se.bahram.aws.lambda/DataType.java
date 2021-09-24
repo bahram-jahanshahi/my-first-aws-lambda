@@ -1,5 +1,8 @@
 package se.bahram.aws.lambda;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.*;
 
 public class DataType {
@@ -37,6 +40,20 @@ public class DataType {
         studentScores.put("Marco", Arrays.asList(70, 90, 95));
 
         return studentScores;
+    }
+
+    public ClinicalData getClinicals(Patient patient) {
+        ClinicalData clinicalData = new ClinicalData();
+        clinicalData.setBp("80/120");
+        clinicalData.setHeartRate("80");
+        return clinicalData;
+    }
+
+    public void getOutput(InputStream input, OutputStream output) throws IOException {
+        int data = 0;
+        while ((data = input.read()) != -1) {
+            output.write(Character.toLowerCase(data));
+        }
     }
 
 }

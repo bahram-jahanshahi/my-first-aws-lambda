@@ -9,6 +9,25 @@ import java.util.*;
 
 public class DataType {
 
+    private Double instanceVariable = Math.random();
+    private static Double staticVariable = Math.random();
+
+    public void coldsStartBasics() {
+        Double localVariable = Math.random();
+
+        System.out.println("localVariable = " + localVariable);
+        System.out.println("instanceVariable = " + instanceVariable);
+        System.out.println("staticVariable = " + staticVariable);
+    }
+
+    public DataType() {
+        System.out.println("Inside Constructor");
+    }
+
+    static {
+        System.out.println("Static Block executed");
+    }
+
     public boolean getNumber(float number) {
         return number > 100;
     }

@@ -13,7 +13,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: HelloWorldFunction
-      Handler: se.bahram.aws.lambda.DataType::getOutput
+      Handler: se.bahram.aws.lambda.DataType::coldsStartBasics
       Runtime: java11
       MemorySize: 512
       Timeout: 6

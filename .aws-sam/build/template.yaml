@@ -13,6 +13,6 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: HelloWorldFunction
-      Handler: helloworld.SimpleApp::hello
+      Handler: se.bahram.aws.lambda.DataType::getStudentScores
       Runtime: java11
       MemorySize: 512
